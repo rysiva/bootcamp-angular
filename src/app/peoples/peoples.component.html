@@ -1,0 +1,12 @@
+<p>
+  peoples works!
+</p>
+<table border=1>
+  <tr><th>ID</th><th>Name</th></tr>
+  <tr *ngFor="let people of peoples">
+    <td>{{ people.id }}</td><td>{{ people.name }}</td>
+  </tr>
+</table>
+<br/>
+<input type="text" [formControl]="peopleName"> <button (click)="addPeople()">追加</button>
+<span *ngIf="peopleName.value.length > 0">入力中: {{ peopleName.value }}</span>
